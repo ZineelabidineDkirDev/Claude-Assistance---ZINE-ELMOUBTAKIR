@@ -1,0 +1,6 @@
+{
+  "name": "Maîtrisez l'Analyse des Données avec Claude",
+  "description": "Support de présentation interactif des 5 jours de formation — Analyse de données & BI avec Claude par Zine El Abidine Dkir.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
