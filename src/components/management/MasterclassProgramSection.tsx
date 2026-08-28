@@ -52,14 +52,28 @@ export const MasterclassProgramSection: React.FC<MasterclassProgramSectionProps>
     const next = !detailMode;
     playSwitchClick(next);
     setDetailMode(next);
+    setExpandedDays({
+      1: next,
+      2: next,
+      3: next,
+      4: next,
+      5: next,
+    });
   };
 
   const toggleDayAccordion = (dayNum: number) => {
-    playSwitchClick(!expandedDays[dayNum]);
-    setExpandedDays((prev) => ({
-      ...prev,
-      [dayNum]: !prev[dayNum],
-    }));
+    const current = expandedDays[dayNum] ?? detailMode;
+    const next = !current;
+    playSwitchClick(next);
+    setExpandedDays((prev) => {
+      const updated = { ...prev, [dayNum]: next };
+      // If all are open or all are closed, sync detailMode
+      const allOpen = [1, 2, 3, 4, 5].every((d) => updated[d]);
+      const allClosed = [1, 2, 3, 4, 5].every((d) => !updated[d]);
+      if (allOpen) setDetailMode(true);
+      if (allClosed) setDetailMode(false);
+      return updated;
+    });
   };
 
   const filteredDays =

@@ -50,7 +50,6 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   onToggleTheme,
 }) => {
   const [progressMap, setProgressMap] = useState<Record<number, number | null>>({});
-  const [heroModeSwitch, setHeroModeSwitch] = useState<boolean>(true);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const isLight = theme === 'light';
@@ -64,12 +63,6 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   }, [days]);
 
   const totalSlides = days.reduce((acc, d) => acc + d.slides.length, 0);
-
-  const handleHeroToggle = () => {
-    const next = !heroModeSwitch;
-    playSwitchClick(next);
-    setHeroModeSwitch(next);
-  };
 
   return (
     <div
@@ -142,12 +135,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           >
             Le parcours complet animé par{' '}
             <strong className={isLight ? 'text-neutral-900 font-semibold' : 'text-white font-semibold'}>
-              Zine El Abidine Dkir
+              Zayn4data
             </strong>
-            . Du nettoyage de données et prompt engineering analytique jusqu'à la création de dashboards interactifs et la stratégie de carrière.
+            . Du nettoyage de données et prompt générer et analytique jusqu'à la création de dashboards interactifs et la stratégie de carrière.
           </motion.p>
 
-          {/* Call to Actions & Interactive 0 / I Switch */}
+          {/* Call to Actions */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -179,58 +172,6 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               <BookOpen className="h-4 w-4 text-orange-500" />
               <span>Voir les 5 Jours</span>
             </a>
-
-            {/* Micro 0 / I Toggle Capsule */}
-            <div
-              onClick={handleHeroToggle}
-              className={`cursor-pointer select-none rounded-2xl p-2 px-3.5 backdrop-blur-xl border transition-all duration-300 flex items-center gap-2.5 ${
-                isLight
-                  ? heroModeSwitch
-                    ? 'bg-amber-50 border-amber-300 shadow-sm text-amber-900'
-                    : 'bg-white border-neutral-200 text-neutral-500'
-                  : heroModeSwitch
-                  ? 'bg-[#120d0a]/90 border-orange-500/50 shadow-[0_0_20px_rgba(249,115,22,0.2)]'
-                  : 'bg-[#0e1015]/80 border-white/10 text-neutral-400'
-              }`}
-            >
-              <span className="font-mono text-xs font-bold">
-                MODE 0 / I
-              </span>
-              <div
-                className={`relative flex items-center p-0.5 rounded-full border ${
-                  isLight ? 'bg-neutral-100 border-neutral-300' : 'bg-[#07080c] border-white/15'
-                }`}
-              >
-                <div
-                  className={`w-9 h-5 rounded-full p-0.5 flex items-center transition-colors ${
-                    isLight
-                      ? heroModeSwitch
-                        ? 'bg-amber-200 border border-amber-400'
-                        : 'bg-neutral-300'
-                      : heroModeSwitch
-                      ? 'bg-orange-950/70 border border-orange-500/40'
-                      : 'bg-neutral-800'
-                  }`}
-                >
-                  <motion.div
-                    layout
-                    transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-                    className={`h-4 w-4 rounded-full flex items-center justify-center font-mono text-[8px] font-black ${
-                      isLight
-                        ? heroModeSwitch
-                          ? 'bg-amber-500 text-white'
-                          : 'bg-neutral-500 text-white'
-                        : heroModeSwitch
-                        ? 'bg-orange-400 text-black shadow-[0_0_10px_#F97316]'
-                        : 'bg-neutral-600 text-neutral-300'
-                    }`}
-                    style={{ marginLeft: heroModeSwitch ? 'auto' : '0' }}
-                  >
-                    {heroModeSwitch ? 'I' : '0'}
-                  </motion.div>
-                </div>
-              </div>
-            </div>
           </motion.div>
 
           {/* Quick Metrics Ticker */}
