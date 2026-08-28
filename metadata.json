@@ -1,6 +1,6 @@
 {
   "name": "Zayn4Data — Analyse de Données & BI",
-  "description": "Zayn4Data — Support interactif des 5 jours de formation en analyse de données & BI avec Claude par Zine El Abidine Dkir.",
+  "description": "Zayn4Data — Masterclass de 5 jours en Analyse de Données & Business Intelligence avec Claude, animée par Zine El Abidine Dkir.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

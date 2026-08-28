@@ -4,6 +4,24 @@ export interface StoredProgress {
 }
 
 const STORAGE_PREFIX = 'c4d_progress_day_';
+const THEME_KEY = 'zayn_theme_mode';
+
+export function readTheme(): 'dark' | 'light' {
+  try {
+    const raw = localStorage.getItem(THEME_KEY);
+    return raw === 'light' ? 'light' : 'dark';
+  } catch {
+    return 'dark';
+  }
+}
+
+export function saveTheme(theme: 'dark' | 'light'): void {
+  try {
+    localStorage.setItem(THEME_KEY, theme);
+  } catch {
+    // Ignore
+  }
+}
 
 export function readProgress(day: number): number | null {
   try {

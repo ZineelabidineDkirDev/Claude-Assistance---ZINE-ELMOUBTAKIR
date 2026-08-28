@@ -5,7 +5,7 @@ import { HomePage } from './components/HomePage';
 import { ResourcesPage } from './components/ResourcesPage';
 import { SlideDeck } from './components/SlideDeck';
 import { CommandPalette } from './components/CommandPalette';
-import { readProgress } from './utils/storage';
+import { readProgress, readTheme, saveTheme } from './utils/storage';
 
 type ViewType = 'landing' | 'home' | 'resources' | 'deck';
 
@@ -14,6 +14,20 @@ export default function App() {
   const [activeDayNum, setActiveDayNum] = useState<number>(1);
   const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0);
   const [isGlobalSearchOpen, setIsGlobalSearchOpen] = useState(false);
+  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+
+  useEffect(() => {
+    const savedTheme = readTheme();
+    setTheme(savedTheme);
+  }, []);
+
+  const handleToggleTheme = useCallback(() => {
+    setTheme((prev) => {
+      const next = prev === 'dark' ? 'light' : 'dark';
+      saveTheme(next);
+      return next;
+    });
+  }, []);
 
   // Parse path on initial load & popstate
   const syncFromUrl = useCallback(() => {
@@ -116,7 +130,11 @@ export default function App() {
   const activeDay = DAYS_DATA.find((d) => d.day === activeDayNum) || DAYS_DATA[0];
 
   return (
-    <div className="min-h-full font-sans bg-[#070708] text-neutral-200">
+    <div
+      className={`min-h-full font-sans transition-colors duration-300 ${
+        theme === 'light' ? 'bg-[#f8fafc] text-neutral-900' : 'bg-[#070708] text-neutral-200'
+      }`}
+    >
       {view === 'landing' && (
         <LandingPage
           days={DAYS_DATA}
@@ -124,6 +142,8 @@ export default function App() {
           onNavigateCurriculum={navigateCurriculum}
           onNavigateResources={navigateResources}
           onOpenCommandPalette={() => setIsGlobalSearchOpen(true)}
+          theme={theme}
+          onToggleTheme={handleToggleTheme}
         />
       )}
 
