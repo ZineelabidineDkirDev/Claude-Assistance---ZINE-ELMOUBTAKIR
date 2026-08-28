@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Day } from '../types';
 import { readProgress } from '../utils/storage';
+import { ZaynLogo } from './ZaynLogo';
 import {
   Sparkles,
   ArrowRight,
@@ -205,17 +206,17 @@ await dataAgent.run("Inspecte la chute de conversion sur le segment B2B et gén�
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-8">
           {/* Logo & Brand */}
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 shadow-[0_0_15px_rgba(249,115,22,0.4)]">
-              <Sparkles className="h-5 w-5 text-white" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#141416] border border-orange-500/30 p-1.5 shadow-[0_0_18px_rgba(249,115,22,0.35)] ring-1 ring-orange-500/20">
+              <ZaynLogo className="h-full w-full" color="#F97316" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-display font-bold text-white text-base tracking-tight">Formations4data</span>
-                <span className="rounded-full bg-white/10 px-2 py-0.5 font-mono text-[9.5px] font-semibold text-neutral-300">
-                  Eurêka Services
+                <span className="font-display font-bold text-white text-base tracking-tight">Zayn4Data</span>
+                <span className="rounded-full bg-orange-500/15 border border-orange-500/30 px-2 py-0.5 font-mono text-[9.5px] font-semibold text-orange-400">
+                  Data & BI
                 </span>
               </div>
-              <p className="font-mono text-[10px] text-orange-400">Masterclass Claude pour la Data</p>
+              <p className="font-mono text-[10px] text-neutral-400">Par Zine El Abidine Dkir</p>
             </div>
           </div>
 
@@ -777,15 +778,20 @@ await dataAgent.run("Inspecte la chute de conversion sur le segment B2B et gén�
       {/* Footer */}
       <footer className="py-12 bg-[#050506] text-neutral-400 text-xs">
         <div className="mx-auto max-w-7xl px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
-            <div className="flex items-center gap-2 text-white font-bold text-sm">
-              <span>Formations4data</span>
-              <span className="text-neutral-500">·</span>
-              <span className="text-neutral-400">Eurêka Services</span>
+          <div className="flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#141416] border border-orange-500/30 p-1 ring-1 ring-orange-500/20">
+              <ZaynLogo className="h-full w-full" color="#F97316" />
             </div>
-            <p className="mt-1 text-[11px] text-neutral-500">
-              Maîtrisez l'Analyse des Données avec Claude — Masterclass 5 Jours.
-            </p>
+            <div>
+              <div className="flex items-center gap-2 text-white font-bold text-sm">
+                <span>Zayn4Data</span>
+                <span className="text-neutral-500">·</span>
+                <span className="text-orange-400">Data & BI</span>
+              </div>
+              <p className="mt-0.5 text-[11px] text-neutral-400">
+                Par Zine El Abidine Dkir — Masterclass Analyse des Données & Décisionnel d'Entreprise.
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-6 font-mono text-[11px]">

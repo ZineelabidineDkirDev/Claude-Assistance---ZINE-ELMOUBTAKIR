@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Day } from '../types';
 import { readProgress } from '../utils/storage';
 import { ArrowLeft, ArrowRight, BookOpen, Calendar, CheckCircle2, Play, Search, Sparkles } from 'lucide-react';
+import { ZaynLogo } from './ZaynLogo';
 
 interface HomePageProps {
   days: Day[];
@@ -65,8 +66,10 @@ export const HomePage: React.FC<HomePageProps> = ({
       <div className="border-b border-white/10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-900 via-[#0a0a0a] to-[#050505] px-6 py-12 sm:px-16 text-white">
         <div className="mx-auto max-w-3xl">
           <div className="flex items-center gap-2.5 font-mono text-[12.5px] font-medium uppercase tracking-[0.14em] text-orange-400">
-            <span className="h-1.5 w-1.5 rounded-full bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.6)]" />
-            <span>Zine El Abidine Dkir · Data Analyst BI</span>
+            <div className="flex h-6 w-6 items-center justify-center rounded-md bg-[#18181b] border border-orange-500/30 p-0.5 shadow-[0_0_8px_rgba(249,115,22,0.4)]">
+              <ZaynLogo className="h-full w-full" color="#F97316" />
+            </div>
+            <span>Zayn4Data · Zine El Abidine Dkir</span>
           </div>
 
           <h1 className="mt-4 font-display text-[clamp(28px,5vw,44px)] font-bold leading-tight text-white tracking-tight">

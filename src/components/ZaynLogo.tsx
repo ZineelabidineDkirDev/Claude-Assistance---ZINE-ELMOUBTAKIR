@@ -1,0 +1,72 @@
+import React from 'react';
+
+interface ZaynLogoProps {
+  className?: string;
+  size?: number;
+  color?: string;
+}
+
+export const ZaynLogo: React.FC<ZaynLogoProps> = ({
+  className = 'h-8 w-8',
+  size,
+  color = '#F97316',
+}) => {
+  return (
+    <svg
+      viewBox="0 0 500 500"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={size ? { width: size, height: size } : undefined}
+      role="img"
+      aria-label="Zayn4Data Logo"
+    >
+      <circle cx="250" cy="250" r="235" fill="none" stroke={color} strokeWidth="6" opacity="0.15" />
+      
+      {/* Top Glyph Piece */}
+      <path
+        d="M 125 190 C 150 115 210 75 250 75 C 290 75 350 115 375 190 L 320 220 C 305 170 275 140 250 140 C 225 140 195 170 180 220 L 125 190 Z"
+        fill={color}
+      />
+      <path
+        d="M 230 145 L 270 145 L 270 235 L 340 185 L 375 220 L 290 280 L 290 240 L 230 240 Z"
+        fill={color}
+      />
+      <path
+        d="M 230 185 L 180 225 L 210 260 L 250 225 L 250 185 Z"
+        fill={color}
+      />
+
+      {/* Bottom Left Glyph Piece (Z shape hugging bottom-left quadrant) */}
+      <path
+        d="M 120 230 L 235 295 L 235 345 L 165 305 C 145 330 135 365 140 395 C 145 405 160 425 185 438 L 160 480 C 110 450 85 400 80 345 C 75 295 95 250 120 230 Z"
+        fill={color}
+      />
+      <path
+        d="M 155 355 L 235 400 L 235 448 L 195 448 C 170 440 155 425 145 405 L 155 355 Z"
+        fill={color}
+      />
+      <path
+        d="M 155 240 L 235 240 L 235 285 L 125 285 Z"
+        fill={color}
+      />
+
+      {/* Bottom Right Glyph Piece (S/D shape hugging bottom-right quadrant) */}
+      <path
+        d="M 380 230 C 405 250 425 295 420 345 C 415 400 390 450 340 480 L 315 438 C 340 425 355 405 360 395 C 365 365 355 330 335 305 L 265 345 L 265 295 L 380 230 Z"
+        fill={color}
+      />
+      <path
+        d="M 265 240 L 345 240 L 375 285 L 265 285 Z"
+        fill={color}
+      />
+      <path
+        d="M 265 400 L 345 355 L 355 405 C 345 425 330 440 305 448 L 265 448 Z"
+        fill={color}
+      />
+
+      {/* Central Divider Bar / Axis */}
+      <rect x="240" y="240" width="20" height="215" fill={color} rx="4" />
+    </svg>
+  );
+};

@@ -97,7 +97,7 @@ export const DAYS_DATA: Day[] = [
       {
         "id": "cover",
         "type": "cover",
-        "eyebrow": "Jour 01 · Formations4data",
+        "eyebrow": "Jour 01 · Zayn4Data",
         "title": [
           "Découverte complète de",
           "l'écosystème Claude"
@@ -340,10 +340,10 @@ export const DAYS_DATA: Day[] = [
         "id": "lois-protection-donnees-afrique",
         "type": "data-table",
         "eyebrow": "Chapitre 6",
-        "title": "Quelques repères juridiques dans la région",
-        "lead": "À vérifier et actualiser selon le pays de chacun — les lois évoluent.",
+        "title": "Repères juridiques et protection des données",
+        "lead": "Cadres légaux de référence pour le traitement des données et la conformité.",
         "columns": [
-          "Pays",
+          "Pays / Région",
           "Loi",
           "Autorité",
           "Sanction maximale"
@@ -351,8 +351,26 @@ export const DAYS_DATA: Day[] = [
         "rows": [
           {
             "cells": [
-              "Sénégal",
-              "Loi n°2008-12",
+              "Maroc 🇲🇦",
+              "Loi n° 09-08",
+              "CNDP",
+              "300 000 MAD + sanctions pénales"
+            ],
+            "critical": true
+          },
+          {
+            "cells": [
+              "Union Européenne 🇪🇺",
+              "RGPD (GDPR)",
+              "CNIL / EDPB",
+              "20M € ou 4% du CA mondial"
+            ],
+            "critical": false
+          },
+          {
+            "cells": [
+              "Sénégal 🇸🇳",
+              "Loi n° 2008-12",
               "CDP",
               "100M FCFA + peines pénales"
             ],
@@ -360,33 +378,15 @@ export const DAYS_DATA: Day[] = [
           },
           {
             "cells": [
-              "Côte d'Ivoire",
-              "Loi n°2013-450",
+              "Côte d'Ivoire 🇨🇮",
+              "Loi n° 2013-450",
               "ARTCI",
               "500M FCFA (récidive)"
             ],
             "critical": false
-          },
-          {
-            "cells": [
-              "Nigeria",
-              "NDPA 2023",
-              "NDPC",
-              "% du chiffre d'affaires"
-            ],
-            "critical": false
-          },
-          {
-            "cells": [
-              "Kenya",
-              "Data Protection Act 2019",
-              "ODPC",
-              "5M KES ou 1% du CA"
-            ],
-            "critical": false
           }
         ],
-        "presenterNotes": "Ne pas s'attarder sur chaque ligne — l'objectif est de montrer que ces lois existent et ont de vraies autorités actives, pas de les mémoriser."
+        "presenterNotes": "Mettre l'accent sur la Loi 09-08 au Maroc (CNDP) et le RGPD : tout transfert de données nominatives vers des serveurs tiers ou des LLM sans accord/anonymisation préalable est sanctionné."
       },
       {
         "id": "anonymiser-avant-upload",
@@ -641,7 +641,7 @@ export const DAYS_DATA: Day[] = [
         ],
         "highlight": "live sur Teams",
         "subtitle": "Questions, blocages GitHub, et découverte de vos premiers dashboards. Demain : Excel & Power BI, sérieusement boostés par Claude.",
-        "meta": "FORMATIONS4DATA · JOUR 02 DEMAIN À LA MÊME HEURE",
+        "meta": "ZAYN4DATA · JOUR 02 DEMAIN À LA MÊME HEURE",
         "metaHighlight": "JOUR 02 DEMAIN À LA MÊME HEURE",
         "presenterNotes": "Clôturer en rappelant le rendez-vous du soir et en teasant le contenu du Jour 2."
       }
@@ -703,7 +703,7 @@ export const DAYS_DATA: Day[] = [
       {
         "id": "cover",
         "type": "cover",
-        "eyebrow": "Jour 02 · Formations4data",
+        "eyebrow": "Jour 02 · Zayn4Data",
         "title": [
           "Excel & Power BI",
           "boostés par Claude"
@@ -848,7 +848,7 @@ export const DAYS_DATA: Day[] = [
         "rows": [
           {
             "cells": [
-              "Centre_Kivu1 · mars/région fusionnées",
+              "Agence_Casa1 · mars/région fusionnées",
               "Cellules fusionnées",
               "Impossible à trier ou filtrer correctement"
             ],
@@ -864,7 +864,7 @@ export const DAYS_DATA: Day[] = [
           },
           {
             "cells": [
-              "\" Kinshasa\" avec espace",
+              "\" Casablanca\" avec espace",
               "Espace invisible en début de cellule",
               "RECHERCHEV échoue sans message d'erreur visible"
             ],
@@ -872,9 +872,9 @@ export const DAYS_DATA: Day[] = [
           },
           {
             "cells": [
-              "CD / RDC / Congo",
-              "Trois façons d'écrire le même pays",
-              "Un TCD compte 3 pays au lieu d'1"
+              "MA / MAR / Maroc",
+              "Trois façons d'écrire le même pays/région",
+              "Un TCD compte 3 entrées au lieu d'1"
             ],
             "critical": false
           }
@@ -948,25 +948,25 @@ export const DAYS_DATA: Day[] = [
         "before": {
           "label": "AVANT",
           "rows": [
-            "centre_1 ; 03/2026 ; kivu ; 45000",
-            "Centre 1 ;  mars ; KIVU ; 45 000",
-            "CENTRE-1 ; 2026-03 ; Kivu ; N/A"
+            "agence_1 ; 03/2026 ; casablanca ; 45000",
+            "Agence 1 ;  mars ; CASABLANCA ; 45 000",
+            "AGENCE-1 ; 2026-03 ; Casablanca ; N/A"
           ]
         },
         "after": {
           "label": "APRÈS",
           "rows": [
             {
-              "primary": "Centre 1 · Mars 2026",
-              "secondary": "45 000 FC"
+              "primary": "Agence 1 · Mars 2026",
+              "secondary": "45 000 DH"
             },
             {
-              "primary": "Centre 2 · Mars 2026",
-              "secondary": "38 000 FC"
+              "primary": "Agence 2 · Mars 2026",
+              "secondary": "38 000 DH"
             },
             {
-              "primary": "Centre 3 · Mars 2026",
-              "secondary": "52 000 FC"
+              "primary": "Agence 3 · Mars 2026",
+              "secondary": "52 000 DH"
             }
           ]
         },
@@ -1119,8 +1119,8 @@ export const DAYS_DATA: Day[] = [
           {
             "cells": [
               "MEN-0231",
-              "Kasaï",
-              "45 000 FC",
+              "Marrakech-Safi",
+              "4 500 DH",
               "Payé"
             ],
             "critical": false
@@ -1128,8 +1128,8 @@ export const DAYS_DATA: Day[] = [
           {
             "cells": [
               "MEN-0231",
-              "Kasaï",
-              "45 000 FC",
+              "Marrakech-Safi",
+              "4 500 DH",
               "Payé"
             ],
             "critical": true
@@ -1137,8 +1137,8 @@ export const DAYS_DATA: Day[] = [
           {
             "cells": [
               "MEN-0198",
-              "kasai",
-              "180 000 FC",
+              "marrakech-safi",
+              "18 000 DH",
               "Payé"
             ],
             "critical": true
@@ -1146,8 +1146,8 @@ export const DAYS_DATA: Day[] = [
           {
             "cells": [
               "MEN-0304",
-              "Tanganyika",
-              "45 000 FC",
+              "Souss-Massa",
+              "4 500 DH",
               "En attente"
             ],
             "critical": false
@@ -1161,7 +1161,7 @@ export const DAYS_DATA: Day[] = [
         "eyebrow": "Chapitre 2 — Le cas du jour",
         "title": "Le prompt de nettoyage pour ce cas précis",
         "filename": "prompt_audit_ong.txt",
-        "code": "Tu es un <k>data analyst senior</k> spécialisé en programmes humanitaires.\nVoici mon fichier de suivi (colonnes : <v>id_menage, region, montant, statut</v>).\n\n1. Identifie les doublons d'ID ménage.\n2. Repère les montants qui dépassent <v>2x la médiane</v> de la région.\n3. Uniformise l'orthographe des régions.\n4. Explique chaque anomalie en une phrase, pour un responsable programme non-technique.",
+        "code": "Tu es un <k>data analyst senior</k> spécialisé en programmes de subventions et suivi de projets.\nVoici mon fichier de suivi (colonnes : <v>id_menage, region, montant, statut</v>).\n\n1. Identifie les doublons d'ID ménage.\n2. Repère les montants qui dépassent <v>2x la médiane</v> de la région.\n3. Uniformise l'orthographe des régions.\n4. Explique chaque anomalie en une phrase, pour un responsable programme non-technique.",
         "presenterNotes": "Montrer qu'un prompt précis (seuil à 2x la médiane, pas juste \"trouve les erreurs\") donne un résultat bien plus exploitable."
       },
       {
@@ -1172,25 +1172,25 @@ export const DAYS_DATA: Day[] = [
         "before": {
           "label": "AVANT",
           "rows": [
-            "MEN-0231 ; Kasaï ; 45000FC ; paye",
-            "MEN-0231 ; Kasaï ; 45000 ; PAYE",
-            "MEN-0198 ; kasai ; 180 000 ; Payé"
+            "MEN-0231 ; Marrakech-Safi ; 4500DH ; paye",
+            "MEN-0231 ; Marrakech-Safi ; 4500 ; PAYE",
+            "MEN-0198 ; marrakech-safi ; 18 000 ; Payé"
           ]
         },
         "after": {
           "label": "APRÈS",
           "rows": [
             {
-              "primary": "MEN-0231 · Kasaï",
-              "secondary": "45 000 FC"
+              "primary": "MEN-0231 · Marrakech-Safi",
+              "secondary": "4 500 DH"
             },
             {
-              "primary": "MEN-0198 · Kasaï — à vérifier",
-              "secondary": "180 000 FC ⚠"
+              "primary": "MEN-0198 · Marrakech-Safi — à vérifier",
+              "secondary": "18 000 DH ⚠"
             },
             {
-              "primary": "MEN-0304 · Tanganyika",
-              "secondary": "45 000 FC"
+              "primary": "MEN-0304 · Souss-Massa",
+              "secondary": "4 500 DH"
             }
           ]
         },
@@ -1694,7 +1694,7 @@ export const DAYS_DATA: Day[] = [
         ],
         "highlight": "live sur Teams",
         "subtitle": "Questions, blocages Power BI, et découverte de vos dashboards ONG. Demain : SQL, Python et R, avec le même réflexe de vérification qu'aujourd'hui.",
-        "meta": "FORMATIONS4DATA · JOUR 03 DEMAIN À LA MÊME HEURE",
+        "meta": "ZAYN4DATA · JOUR 03 DEMAIN À LA MÊME HEURE",
         "metaHighlight": "JOUR 03 DEMAIN À LA MÊME HEURE",
         "presenterNotes": "Clôturer en rappelant le rendez-vous du soir et en teasant le contenu du Jour 3 — coding, avec le même fil rouge de rigueur."
       }
@@ -1771,7 +1771,7 @@ export const DAYS_DATA: Day[] = [
       {
         "id": "cover",
         "type": "cover",
-        "eyebrow": "Jour 03 · Formations4data",
+        "eyebrow": "Jour 03 · Zayn4Data",
         "title": [
           "Coding avec Claude —",
           "SQL, Python, R"
@@ -2106,8 +2106,8 @@ export const DAYS_DATA: Day[] = [
           {
             "cells": [
               "PRET-5521",
-              "Goma",
-              "800 000 FC",
+              "Casablanca",
+              "80 000 DH",
               "0"
             ],
             "critical": false
@@ -2115,8 +2115,8 @@ export const DAYS_DATA: Day[] = [
           {
             "cells": [
               "PRET-5522",
-              "Goma",
-              "1 200 000 FC",
+              "Casablanca",
+              "120 000 DH",
               "45"
             ],
             "critical": true
@@ -2124,8 +2124,8 @@ export const DAYS_DATA: Day[] = [
           {
             "cells": [
               "PRET-5523",
-              "Bukavu",
-              "650 000 FC",
+              "Tanger",
+              "65 000 DH",
               "12"
             ],
             "critical": false
@@ -2133,8 +2133,8 @@ export const DAYS_DATA: Day[] = [
           {
             "cells": [
               "PRET-5524",
-              "Bukavu",
-              "2 400 000 FC",
+              "Tanger",
+              "240 000 DH",
               "97"
             ],
             "critical": true
@@ -2157,8 +2157,8 @@ export const DAYS_DATA: Day[] = [
         "eyebrow": "Chapitre 2 — Checkpoint",
         "value": 18,
         "suffix": "%",
-        "label": "du portefeuille de l'agence de Bukavu dépasse le seuil PAR30 dans notre exercice",
-        "context": "Le seuil d'alerte généralement retenu dans le secteur est autour de 5% — un signal qui justifierait une revue des dossiers de cette agence.",
+        "label": "du portefeuille de l'agence de Tanger dépasse le seuil PAR30 dans notre exercice",
+        "context": "Le seuil d'alerte généralement retenu dans le secteur financier et microfinance marocain est autour de 5% — un signal qui justifierait un audit ciblé.",
         "presenterNotes": "Ancrer le chiffre dans un repère métier réel (seuil ~5%) pour que l'exercice ne reste pas un calcul abstrait."
       },
       {
@@ -2346,7 +2346,7 @@ export const DAYS_DATA: Day[] = [
         "eyebrow": "Chapitre 4",
         "title": "Un test statistique simple, expliqué",
         "filename": "prompt_r_test.txt",
-        "code": "Je veux savoir si le retard moyen diffère significativement entre les agences\nde Goma et Bukavu. Écris un test t en R et explique en une phrase\nce que signifie le résultat, <k>sans jargon statistique</k>.",
+        "code": "Je veux savoir si le retard moyen diffère significativement entre les agences\nde Casablanca et Tanger. Écris un test t en R et explique en une phrase\nce que signifie le résultat, <k>sans jargon statistique</k>.",
         "presenterNotes": "L'objectif n'est pas de maîtriser les tests statistiques en une slide, mais de savoir en demander un et en comprendre la conclusion."
       },
       {
@@ -2642,7 +2642,7 @@ export const DAYS_DATA: Day[] = [
         ],
         "highlight": "live sur Teams",
         "subtitle": "Questions, blocages SQL/Python/R, et retour sur le protocole de vérification. Demain : on assemble tout en un projet de portfolio complet.",
-        "meta": "FORMATIONS4DATA · JOUR 04 DEMAIN À LA MÊME HEURE",
+        "meta": "ZAYN4DATA · JOUR 04 DEMAIN À LA MÊME HEURE",
         "metaHighlight": "JOUR 04 DEMAIN À LA MÊME HEURE",
         "presenterNotes": "Teaser du Jour 4 : on ne rajoute plus de nouvel outil, on assemble tout ce qui a été vu pour en faire un vrai projet de portfolio."
       }
@@ -2709,7 +2709,7 @@ export const DAYS_DATA: Day[] = [
       {
         "id": "cover",
         "type": "cover",
-        "eyebrow": "Jour 04 · Formations4data",
+        "eyebrow": "Jour 04 · Zayn4Data",
         "title": [
           "Portfolio complet +",
           "stratégie carrière"
@@ -2937,10 +2937,10 @@ export const DAYS_DATA: Day[] = [
         "id": "lois-protection-donnees",
         "type": "data-table",
         "eyebrow": "Chapitre 1 — Rappel",
-        "title": "La loi de protection des données de ton pays",
-        "lead": "Vu au Jour 1 — un rappel utile avant de manipuler des données pour ton propre capstone.",
+        "title": "La loi de protection des données et conformité",
+        "lead": "Rappel de gouvernance avant d'ingérer vos données réelles pour le capstone.",
         "columns": [
-          "Pays",
+          "Pays / Région",
           "Loi",
           "Autorité",
           "Sanction maximale"
@@ -2948,8 +2948,26 @@ export const DAYS_DATA: Day[] = [
         "rows": [
           {
             "cells": [
-              "Sénégal",
-              "Loi n°2008-12",
+              "Maroc 🇲🇦",
+              "Loi n° 09-08",
+              "CNDP",
+              "300 000 MAD + sanctions pénales"
+            ],
+            "critical": true
+          },
+          {
+            "cells": [
+              "Union Européenne 🇪🇺",
+              "RGPD (GDPR)",
+              "CNIL / EDPB",
+              "20M € ou 4% du CA mondial"
+            ],
+            "critical": false
+          },
+          {
+            "cells": [
+              "Sénégal 🇸🇳",
+              "Loi n° 2008-12",
               "CDP",
               "100M FCFA + peines pénales"
             ],
@@ -2957,28 +2975,10 @@ export const DAYS_DATA: Day[] = [
           },
           {
             "cells": [
-              "Côte d'Ivoire",
-              "Loi n°2013-450",
+              "Côte d'Ivoire 🇨🇮",
+              "Loi n° 2013-450",
               "ARTCI",
               "500M FCFA (récidive)"
-            ],
-            "critical": false
-          },
-          {
-            "cells": [
-              "Nigeria",
-              "NDPA 2023",
-              "NDPC",
-              "% du chiffre d'affaires"
-            ],
-            "critical": false
-          },
-          {
-            "cells": [
-              "Kenya",
-              "Data Protection Act 2019",
-              "ODPC",
-              "5M KES ou 1% du CA"
             ],
             "critical": false
           }
@@ -3081,21 +3081,21 @@ export const DAYS_DATA: Day[] = [
         "id": "cas-cacao-detail",
         "type": "principle-list",
         "eyebrow": "Chapitre 2 — Option 2",
-        "title": "Coopérative cacao — le contexte",
-        "lead": "Inspiré de dispositifs réels de traçabilité (Ghana, Côte d'Ivoire) — exemple pédagogique, pas des données d'une coopérative nommée.",
+        "title": "Coopérative agricole & Terroir — le contexte",
+        "lead": "Inspiré des coopératives agricoles marocaines (Huile d'Argan, Oléiculture, Agrumes Souss-Massa & Béni Mellal) — exemple pédagogique de traçabilité.",
         "items": [
           {
             "num": "01",
             "title": "Le problème",
-            "detail": "Vérifier que chaque producteur est payé au juste prix et que les parcelles sont traçables."
+            "detail": "Vérifier que chaque producteur et adhérent est rémunéré équitablement et que les parcelles sont certifiées IGP/Bio."
           },
           {
             "num": "02",
             "title": "La décision à informer",
-            "detail": "Quelles parcelles ou coopératives présentent un risque de non-conformité."
+            "detail": "Quelles parcelles ou lots coopératifs présentent un risque de non-conformité ou d'anomalie de rendement."
           }
         ],
-        "presenterNotes": "Bon cas pour qui s'intéresse à l'agro-industrie — mentionner la dimension traçabilité/export si des apprenants viennent de ce secteur."
+        "presenterNotes": "Cas d'excellence pour les filières agro-industrielles et produits de terroir marocains (Plan Génération Green)."
       },
       {
         "id": "cas-cacao-donnees",
@@ -3104,7 +3104,7 @@ export const DAYS_DATA: Day[] = [
         "title": "Colonnes types du dataset coopérative",
         "columns": [
           "Producteur",
-          "Coopérative",
+          "Coopérative / Région",
           "Volume (kg)",
           "Prix payé / kg"
         ],
@@ -3112,27 +3112,27 @@ export const DAYS_DATA: Day[] = [
           {
             "cells": [
               "PROD-102",
-              "Coop Kivu Nord",
+              "Coop Argan Souss",
               "340 kg",
-              "1 200 FC"
+              "120 DH"
             ],
             "critical": false
           },
           {
             "cells": [
               "PROD-118",
-              "Coop Kivu Nord",
+              "Coop Argan Souss",
               "12 kg",
-              "1 200 FC"
+              "120 DH"
             ],
             "critical": true
           },
           {
             "cells": [
               "PROD-145",
-              "Coop Sud-Lac",
+              "Coop Atlas Olive",
               "280 kg",
-              "950 FC"
+              "95 DH"
             ],
             "critical": false
           }
@@ -3607,7 +3607,7 @@ export const DAYS_DATA: Day[] = [
         ],
         "highlight": "live sur Teams",
         "subtitle": "Questions sur ton capstone, ton portfolio ou ton profil LinkedIn. Demain : soutenance, certification, et lancement de ton plan des 90 jours.",
-        "meta": "FORMATIONS4DATA · JOUR 05 DEMAIN À LA MÊME HEURE",
+        "meta": "ZAYN4DATA · JOUR 05 DEMAIN À LA MÊME HEURE",
         "metaHighlight": "JOUR 05 DEMAIN À LA MÊME HEURE",
         "presenterNotes": "Rappeler que le live de ce soir est l'occasion de débloquer un capstone qui coince avant la soutenance du lendemain."
       }
@@ -3679,7 +3679,7 @@ export const DAYS_DATA: Day[] = [
       {
         "id": "cover",
         "type": "cover",
-        "eyebrow": "Jour 05 · Formations4data",
+        "eyebrow": "Jour 05 · Zayn4Data",
         "title": [
           "Présentation &",
           "lancement"
@@ -4346,7 +4346,7 @@ export const DAYS_DATA: Day[] = [
         ],
         "highlight": "démarre maintenant",
         "subtitle": "Merci d'avoir été présent et rigoureux cette semaine. La suite dépend de toi, avec Claude comme copilote — exactement comme depuis lundi.",
-        "meta": "FORMATIONS4DATA · MERCI D'AVOIR ÉTÉ LÀ CETTE SEMAINE",
+        "meta": "ZAYN4DATA · MERCI D'AVOIR ÉTÉ LÀ CETTE SEMAINE",
         "metaHighlight": "MERCI D'AVOIR ÉTÉ LÀ CETTE SEMAINE",
         "presenterNotes": "Clôture officielle de la formation — laisser un temps pour les derniers mots, applaudissements ou questions finales en live."
       }

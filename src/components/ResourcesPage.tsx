@@ -1,6 +1,7 @@
 import React from 'react';
 import { RESOURCES_DATA } from '../data/resourcesData';
 import { ArrowLeft, ExternalLink, FolderOpen, ArrowRight } from 'lucide-react';
+import { ZaynLogo } from './ZaynLogo';
 
 interface ResourcesPageProps {
   onNavigateHome: () => void;
@@ -21,8 +22,10 @@ export const ResourcesPage: React.FC<ResourcesPageProps> = ({ onNavigateHome }) 
           </button>
 
           <div className="flex items-center gap-2.5 font-mono text-[12.5px] font-medium uppercase tracking-[0.14em] text-orange-400">
-            <span className="h-1.5 w-1.5 rounded-full bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.6)]" />
-            <span>Zine El Abidine Dkir · Data Analyst BI</span>
+            <div className="flex h-6 w-6 items-center justify-center rounded-md bg-[#18181b] border border-orange-500/30 p-0.5 shadow-[0_0_8px_rgba(249,115,22,0.4)]">
+              <ZaynLogo className="h-full w-full" color="#F97316" />
+            </div>
+            <span>Zayn4Data · Zine El Abidine Dkir</span>
           </div>
 
           <h1 className="mt-4 font-display text-[clamp(28px,5vw,44px)] font-bold leading-tight text-white tracking-tight">
