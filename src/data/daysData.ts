@@ -1706,9 +1706,9 @@ export const DAYS_DATA: Day[] = [
     "date": "2026-07-15",
     "objective": "Écrire et comprendre de vraies requêtes SQL, construire un pipeline Python complet, découvrir R — avec un seul fil rouge (le risque de crédit d'une institution de microfinance) et une discipline de vérification qui ne relâche jamais la garde face au code généré par l'IA.",
     "deliverables": [
-      "Un notebook Python reproductible (import → nettoyage → analyse → visualisation)",
-      "Une analyse R sur le même jeu de données",
-      "Les requêtes SQL du cas microfinance, commentées et expliquées"
+      "Requêtes SQL du cas microfinance : commentées, avec l'explication de chaque clause",
+      "Notebook Python reproductible : redémarré et exécuté en entier avant l'envoi",
+      "Analyse R : statistiques descriptives et test simple, sur le même jeu de données"
     ],
     "chapters": [
       {

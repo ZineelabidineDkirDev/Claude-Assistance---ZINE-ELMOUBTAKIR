@@ -19,8 +19,11 @@ import {
   Cpu,
   Target,
   Award,
+  Eye,
+  ExternalLink,
 } from 'lucide-react';
 import { playSwitchClick, playSlideTransition } from '../../utils/soundEffects';
+import { DeliverablePreviewModal } from './DeliverablePreviewModal';
 
 interface MasterclassProgramSectionProps {
   days: Day[];
@@ -40,6 +43,7 @@ export const MasterclassProgramSection: React.FC<MasterclassProgramSectionProps>
   // 0 = Compact View, 1 = Detailed Chapters View
   const [detailMode, setDetailMode] = useState<boolean>(true);
   const [selectedDayTab, setSelectedDayTab] = useState<number | 'all'>('all');
+  const [previewDeliverableDay, setPreviewDeliverableDay] = useState<number | null>(null);
   const [expandedDays, setExpandedDays] = useState<Record<number, boolean>>({
     1: true,
     2: false,
@@ -146,8 +150,8 @@ export const MasterclassProgramSection: React.FC<MasterclassProgramSectionProps>
     },
     3: {
       duration: '2h15',
-      focus: "Coding Data : Requêtes SQL complexes, Scripts Python & Analyse Statistique",
-      project: "Pipeline Analytique complet SQL + Python assisté par Claude",
+      focus: "Coding Data : Requêtes SQL complexes, Pipeline Python & Statistiques R",
+      project: "Projet Transversal : Audit Risque de Crédit Microfinance (SQL, Python & R)",
     },
     4: {
       duration: '2h00',
@@ -413,9 +417,34 @@ export const MasterclassProgramSection: React.FC<MasterclassProgramSectionProps>
                   <span className="font-mono text-[10px] uppercase font-bold text-orange-500 shrink-0">Objectif:</span>
                   <span className="leading-snug">{summary.focus}</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <span className="font-mono text-[10px] uppercase font-bold text-cyan-600 shrink-0">Livrable:</span>
-                  <span className="font-semibold leading-snug">{summary.project}</span>
+                <div
+                  onClick={() => {
+                    playSlideTransition();
+                    setPreviewDeliverableDay(day.day);
+                  }}
+                  className={`flex items-start justify-between gap-2 p-2 rounded-xl border transition-all cursor-pointer group ${
+                    isLight
+                      ? 'bg-cyan-50/70 hover:bg-cyan-100/80 border-cyan-200 hover:border-cyan-400 text-cyan-950 shadow-xs'
+                      : 'bg-cyan-950/20 hover:bg-cyan-950/40 border-cyan-500/20 hover:border-cyan-500/50 text-cyan-200 shadow-[0_0_15px_rgba(6,182,212,0.1)]'
+                  }`}
+                  title="Cliquer pour afficher le livrable interactif"
+                >
+                  <div className="flex items-start gap-2 min-w-0">
+                    <span className="font-mono text-[10px] uppercase font-bold text-cyan-500 shrink-0">Livrable:</span>
+                    <span className="font-semibold leading-snug truncate group-hover:text-cyan-400 transition-colors">
+                      {summary.project}
+                    </span>
+                  </div>
+                  <span
+                    className={`shrink-0 inline-flex items-center gap-1 px-2 py-0.5 rounded-md font-mono text-[10px] font-bold transition-all ${
+                      isLight
+                        ? 'bg-cyan-600 text-white group-hover:bg-cyan-700 shadow-xs'
+                        : 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 group-hover:bg-cyan-500 group-hover:text-black'
+                    }`}
+                  >
+                    <Eye className="h-3 w-3" />
+                    <span>{day.day === 1 ? 'Voir Dashboard' : 'Voir Projet'}</span>
+                  </span>
                 </div>
               </div>
 
@@ -526,6 +555,15 @@ export const MasterclassProgramSection: React.FC<MasterclassProgramSectionProps>
           );
         })}
       </div>
+
+      {/* Deliverable Interactive Preview Modal */}
+      <DeliverablePreviewModal
+        isOpen={previewDeliverableDay !== null}
+        dayNumber={previewDeliverableDay || 1}
+        onClose={() => setPreviewDeliverableDay(null)}
+        onLaunchDay={(dayNum, slideIdx) => onSelectDay(dayNum, slideIdx)}
+        theme={theme}
+      />
     </section>
   );
 };
