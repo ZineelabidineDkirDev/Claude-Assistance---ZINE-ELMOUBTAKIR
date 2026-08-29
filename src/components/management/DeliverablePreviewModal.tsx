@@ -39,6 +39,8 @@ import {
 } from 'lucide-react';
 import { playSlideTransition, playSwitchClick } from '../../utils/soundEffects';
 import { Day3DeliverableContent } from './Day3DeliverableContent';
+import { Day4DeliverableContent } from './Day4DeliverableContent';
+import { Day5DeliverableContent } from './Day5DeliverableContent';
 
 interface DeliverablePreviewModalProps {
   isOpen: boolean;
@@ -343,7 +345,7 @@ Projet de tableau de bord décisionnel conçu pour la surveillance en temps rée
                     : dayNumber === 3
                     ? 'Projet Transversal : Audit Risque de Crédit Microfinance (SQL, Python & R)'
                     : dayNumber === 4
-                    ? 'Site Portfolio Data publié + Plan Stratégique Carrière 90 Jours'
+                    ? 'Portfolio Financier aux Normes Marocaines (CGNC) — Rapport Analytique Power BI (.pbix)'
                     : 'Certification, Restitution & Démarrage du Plan d\'Action'}
                 </h3>
               </div>
@@ -375,10 +377,18 @@ Projet de tableau de bord décisionnel conçu pour la surveillance en temps rée
             </div>
           </div>
 
-          {/* If Day 3, render dedicated Day 3 content */}
+          {/* If Day 3, Day 4 or Day 5, render dedicated deliverable content */}
           {dayNumber === 3 ? (
             <div className="p-4 sm:p-6 overflow-y-auto flex-1">
               <Day3DeliverableContent theme={theme} onLaunchDay={onLaunchDay} />
+            </div>
+          ) : dayNumber === 4 ? (
+            <div className="p-4 sm:p-6 overflow-y-auto flex-1">
+              <Day4DeliverableContent theme={theme} onLaunchDay={onLaunchDay} />
+            </div>
+          ) : dayNumber === 5 ? (
+            <div className="p-4 sm:p-6 overflow-y-auto flex-1">
+              <Day5DeliverableContent theme={theme} onLaunchDay={onLaunchDay} />
             </div>
           ) : (
             <>
@@ -1304,6 +1314,10 @@ Projet de tableau de bord décisionnel conçu pour la surveillance en temps rée
             <div className="text-xs text-neutral-400 font-sans text-center sm:text-left">
               {dayNumber === 3
                 ? 'Chaque participant repart avec son pipeline SQL + Python reproductible et son analyse R validée à la fin du Jour 03.'
+                : dayNumber === 4
+                ? 'Chaque participant repart avec son rapport Power BI (.pbix) complet conforme aux normes financières marocaines (CGNC) à la fin du Jour 04.'
+                : dayNumber === 5
+                ? 'Chaque participant repart avec son tableau de bord décisionnel Power BI (.pbix) complet prêt pour le pitch et la soutenance Comex.'
                 : `Chaque participant repart avec son propre livrable fonctionnel à la fin du Jour 0${dayNumber}.`}
             </div>
 

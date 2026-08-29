@@ -155,13 +155,13 @@ export const MasterclassProgramSection: React.FC<MasterclassProgramSectionProps>
     },
     4: {
       duration: '2h00',
-      focus: "Visualisation Décisionnelle, Storytelling & Portfolio Professionnel",
-      project: "Site Portfolio Data publié + Plan Stratégique Carrière 90 Jours",
+      focus: "Modélisation Financière, Normes Marocaines (CGNC/IFRS), DAX & États de Synthèse",
+      project: "Portfolio Financier aux Normes Marocaines (CGNC) — Rapport Analytique Power BI (.pbix)",
     },
     5: {
       duration: '1h30',
-      focus: "Présentation des Projets, Pitch Décisionnel & Lancement Opérationnel",
-      project: "Certification, Restitution & Démarrage du Plan d'Action",
+      focus: "Présentation des Projets, Pitch Décisionnel & Restitution Comex",
+      project: "Dashboard Exécutif Comex & Présentation Décisionnelle — Rapport Power BI (.pbix)",
     },
   };
 

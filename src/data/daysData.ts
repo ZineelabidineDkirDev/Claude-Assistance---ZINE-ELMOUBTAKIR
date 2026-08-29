@@ -3,7 +3,7 @@ import { Day } from "../types";
 export const DAYS_DATA: Day[] = [
   {
     "day": 1,
-    "title": "Chapitre 1. (Modifié) : Découverte complète de l'écosystème Claude",
+    "title": "Chapitre 1 : Découverte complète de l'écosystème Claude",
     "date": "2026-07-13",
     "objective": "Faire le tour complet de l'écosystème Claude, comprendre pourquoi il est pertinent pour la data, et publier un premier dashboard en ligne avant la fin de la session.",
     "deliverables": [
@@ -155,8 +155,8 @@ export const DAYS_DATA: Day[] = [
           },
           {
             "num": "04",
-            "title": "Portfolio complet + stratégie carrière",
-            "subtitle": "Site en ligne + plan 90 jours"
+            "title": "Portfolio Financier Maroc (CGNC) & Power BI",
+            "subtitle": "Rapport Power BI (.pbix) CGNC"
           },
           {
             "num": "05",
@@ -738,8 +738,8 @@ export const DAYS_DATA: Day[] = [
           },
           {
             "num": "04",
-            "title": "Portfolio complet + stratégie carrière",
-            "subtitle": "Site en ligne + plan 90 jours"
+            "title": "Portfolio Financier Maroc (CGNC) & Power BI",
+            "subtitle": "Rapport Power BI (.pbix) CGNC"
           },
           {
             "num": "05",
@@ -1806,8 +1806,8 @@ export const DAYS_DATA: Day[] = [
           },
           {
             "num": "04",
-            "title": "Portfolio complet + stratégie carrière",
-            "subtitle": "Site en ligne + plan 90 jours"
+            "title": "Portfolio Financier Maroc (CGNC) & Power BI",
+            "subtitle": "Rapport Power BI (.pbix) CGNC"
           },
           {
             "num": "05",
@@ -2650,13 +2650,13 @@ export const DAYS_DATA: Day[] = [
   },
   {
     "day": 4,
-    "title": "Portfolio complet + stratégie carrière",
+    "title": "Portfolio Financier aux Normes Marocaines (CGNC) — Power BI",
     "date": "2026-07-16",
     "objective": "Cadrer et démarrer un projet capstone complet à partir d'un cas réel au choix, le documenter en portfolio, et optimiser son profil LinkedIn pour la recherche d'opportunités.",
     "deliverables": [
-      "Projet capstone cadré : question métier, hypothèses, données collectées et nettoyées",
-      "Portfolio en ligne avec au moins ce projet documenté",
-      "Profil LinkedIn optimisé, réécrit en direct pendant la session"
+      "Rapport Power BI (.pbix) complet : modèle en étoile et liasse fiscale aux normes marocaines (CGNC)",
+      "Mesures DAX financières certifiées : VA, EBE, FRNG, BFR, Trésorerie Nette et Ratios",
+      "Documentation du cas capstone : cadrage financier et analyse décisionnelle"
     ],
     "chapters": [
       {
@@ -2711,14 +2711,14 @@ export const DAYS_DATA: Day[] = [
         "type": "cover",
         "eyebrow": "Jour 04 · Zayn4Data",
         "title": [
-          "Portfolio complet +",
-          "stratégie carrière"
+          "Portfolio Financier CGNC +",
+          "Rapport Power BI (.pbix)"
         ],
-        "highlight": "stratégie carrière",
-        "subtitle": "On n'apprend plus de nouvel outil aujourd'hui — on assemble tout ce qui a été vu en un vrai projet de portfolio, sur un cas que tu choisis toi-même.",
+        "highlight": "Rapport Power BI (.pbix)",
+        "subtitle": "Modélisation financière complète aux normes marocaines (CGNC/IFRS), élaboration des états de synthèse (CPC & Bilan fonctionnel), mesures DAX et tableau de bord décisionnel Power BI.",
         "meta": "MAÎTRISEZ L'ANALYSE DES DONNÉES AVEC CLAUDE · 16 JUILLET 2026",
         "metaHighlight": "16 JUILLET 2026",
-        "presenterNotes": "Marquer le changement de nature de la journée : plus d'outil nouveau, de l'assemblage et de la mise en valeur de ce qui a déjà été appris."
+        "presenterNotes": "Modélisation financière aux normes marocaines, DAX et création du livrable Power BI pour le portfolio."
       },
       {
         "id": "programme",
@@ -2744,8 +2744,8 @@ export const DAYS_DATA: Day[] = [
           },
           {
             "num": "04",
-            "title": "Portfolio complet + stratégie carrière",
-            "subtitle": "Site en ligne + plan 90 jours"
+            "title": "Portfolio Financier Maroc (CGNC) & Power BI",
+            "subtitle": "Rapport Power BI (.pbix) CGNC"
           },
           {
             "num": "05",
@@ -3583,16 +3583,16 @@ export const DAYS_DATA: Day[] = [
         "title": "Livrables du Jour 04",
         "items": [
           {
-            "title": "Projet capstone cadré",
-            "detail": "Question métier, hypothèses, données collectées et nettoyées"
+            "title": "Rapport Power BI (.pbix) complet",
+            "detail": "Modèle en étoile, liasse fiscale marocaine (CGNC), CPC & Bilan fonctionnel"
           },
           {
-            "title": "Portfolio en ligne",
-            "detail": "Avec au moins ce projet documenté et un lien cliquable"
+            "title": "Mesures DAX financières validées",
+            "detail": "VA, EBE/EBITDA, FRNG, BFR et Trésorerie Nette vérifiés sans écart"
           },
           {
-            "title": "Profil LinkedIn optimisé",
-            "detail": "Titre, section Infos, projets en avant"
+            "title": "Profil LinkedIn & Portfolio financier",
+            "detail": "Titre, section Projets et lien cliquable vers le rapport analytique"
           }
         ],
         "presenterNotes": "Rappeler que le capstone sera présenté demain — ce n'est pas un livrable isolé, c'est la base de la soutenance du Jour 5."
@@ -3619,9 +3619,9 @@ export const DAYS_DATA: Day[] = [
     "date": "2026-07-17",
     "objective": "Soutenir son projet capstone devant le groupe, comprendre les modalités de certification, et repartir avec un plan d'action concret pour les 90 prochains jours.",
     "deliverables": [
-      "Projet capstone finalisé et documenté, présenté à l'oral",
-      "Plan d'action des 90 jours, rédigé avec Claude",
-      "Certification passée"
+      "Rapport Exécutif Power BI (.pbix) complet avec histogrammes, graphiques circulaires & carte interactive",
+      "Restitution Comex & Pitch décisionnel prêt pour soutenance",
+      "Plan d'action de déploiement à 90 jours & Certification Zayn4Data"
     ],
     "chapters": [
       {
@@ -3714,8 +3714,8 @@ export const DAYS_DATA: Day[] = [
           },
           {
             "num": "04",
-            "title": "Portfolio complet + stratégie carrière",
-            "subtitle": "Site en ligne + plan 90 jours"
+            "title": "Portfolio Financier Maroc (CGNC) & Power BI",
+            "subtitle": "Rapport Power BI (.pbix) CGNC"
           },
           {
             "num": "05",
