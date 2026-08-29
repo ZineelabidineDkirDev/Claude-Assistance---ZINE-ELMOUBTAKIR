@@ -170,7 +170,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               }`}
             >
               <BookOpen className="h-4 w-4 text-orange-500" />
-              <span>Voir les 5 Jours</span>
+              <span>Voir le programme</span>
             </a>
           </motion.div>
 
